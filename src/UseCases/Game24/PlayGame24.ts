@@ -1,7 +1,10 @@
-import { FourNumberInput, Game24 } from "src/Domains/Game24/Game24";
-interface IPlayGame24 {
+import { FourNumberInput, Game24 } from "@domains/Game24/Game24";
+import { Service, Token } from "typedi";
+export interface IPlayGame24 {
 	execute(input: FourNumberInput): string;
 }
+export const PlayGame24Token = Symbol("PlayGame24Token").toString();
+@Service()
 export class PlayGame24 implements IPlayGame24 {
 	execute(input: FourNumberInput): string {
 		const game24 = new Game24();

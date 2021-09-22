@@ -7,14 +7,14 @@ export class Game24 implements IGame24 {
 		return this.internalPlay(input);
 	}
 	private internalPlay(input: number[]): boolean {
-		const setOf3: number[][] = this.getPermutation(input);
+		const setOf3: number[][] = this.getPerMutation(input);
 		const setOf2: number[][] = [];
 		for (let i = 0; i < setOf3.length; i++) {
-			setOf2.push(...this.getPermutation(setOf3[i]));
+			setOf2.push(...this.getPerMutation(setOf3[i]));
 		}
 		const setOf1: number[][] = [];
 		for (let i = 0; i < setOf2.length; i++) {
-			setOf1.push(...this.getPermutation(setOf2[i]));
+			setOf1.push(...this.getPerMutation(setOf2[i]));
 		}
 		for (let i = 0; i < setOf1.length; i++) {
 			if (setOf1[i][0] === 24) {
@@ -23,7 +23,7 @@ export class Game24 implements IGame24 {
 		}
 		return false;
 	}
-	private getPermutation(input: number[]): number[][] {
+	private getPerMutation(input: number[]): number[][] {
 		const setOfNumber = [];
 		for (let i = 0; i < input.length; i++) {
 			for (let j = i + 1; j < input.length; j++) {
