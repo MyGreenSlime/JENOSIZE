@@ -6,7 +6,6 @@ import {
 	Req,
 	Res,
 } from "routing-controllers";
-import { FourNumberInput } from "@domains/Game24/Game24";
 import { IPlayGame24, PlayGame24Token } from "@usecases/Game24/PlayGame24";
 import express from "express";
 import { Inject, Service } from "typedi";
