@@ -19,6 +19,7 @@ export class CustomErrorHandler implements ExpressErrorMiddlewareInterface {
 				.status(error.httpCode)
 				.send({ message: error.message, details: error.errors });
 		} else {
+			console.log(error);
 			response.status(error.httpCode).send({ message: error.message });
 		}
 
