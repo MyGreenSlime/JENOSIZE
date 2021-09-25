@@ -1,7 +1,6 @@
 import {
 	Middleware,
 	ExpressErrorMiddlewareInterface,
-	Req,
 } from "routing-controllers";
 import { Service } from "typedi";
 import express from "express";

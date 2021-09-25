@@ -1,6 +1,5 @@
-import { FourNumberInput } from "@domains/Game24/Game24";
 import { XOTable } from "@domains/XOBot/XOBot";
-import { ArrayMaxSize, ArrayMinSize, IsArray, IsInt } from "class-validator";
+import { ArrayMaxSize, ArrayMinSize, IsArray } from "class-validator";
 
 export class PresentationPlayXOInput {
 	@IsArray()

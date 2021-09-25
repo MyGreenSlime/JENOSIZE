@@ -1,5 +1,5 @@
 import { FourNumberInput, Game24 } from "@domains/Game24/Game24";
-import { Service, Token } from "typedi";
+import { Service } from "typedi";
 export interface IPlayGame24 {
 	execute(input: FourNumberInput): string;
 }
