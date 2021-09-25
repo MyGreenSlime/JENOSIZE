@@ -2,7 +2,6 @@ import { useContainer, useExpressServer } from "routing-controllers";
 import express from "express";
 import { RESTControllers } from "./Controllers/RESTControllers";
 import Container from "typedi";
-import { containerSetup } from "@root/ContainerSetup";
 import { middlewares } from "./Middlewares/middlewares";
 useContainer(Container);
 function setExpressApplicationWithControllers(
